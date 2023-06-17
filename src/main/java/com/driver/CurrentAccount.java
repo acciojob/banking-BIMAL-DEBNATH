@@ -86,11 +86,11 @@ public class CurrentAccount extends BankAccount{
         }
 
         //If the new license Id is valid, assign it to the tradeLicenseId field
-//        if(valid){
-//            //tradeLicenseId = sb.toString();
-//
-//        }
-        if(!valid){
+        if(valid){
+            tradeLicenseId = sb.toString();
+
+        }
+        else{
             //Otherwise, throw an exception
             throw new Exception("Valid License can not be generated");
         }
