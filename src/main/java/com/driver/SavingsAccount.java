@@ -4,9 +4,18 @@ public class SavingsAccount extends BankAccount{
     double rate;
     double maxWithdrawalLimit;
 
-//    public SavingsAccount(String name, double balance, double minBalance) {
-//        super(name, balance, minBalance);
-//    }
+
+
+    public SavingsAccount(String name, double balance, double minBalance, double rate, double maxWithdrawalLimit) {
+        super(name, balance, minBalance);
+        this.rate = rate;
+        this.maxWithdrawalLimit = maxWithdrawalLimit;
+    }
+
+    public SavingsAccount(double rate, double maxWithdrawalLimit) {
+        this.rate = rate;
+        this.maxWithdrawalLimit = maxWithdrawalLimit;
+    }
 
     public double getRate() {
         return rate;
