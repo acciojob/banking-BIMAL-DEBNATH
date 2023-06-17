@@ -4,6 +4,9 @@ public class SavingsAccount extends BankAccount{
     double rate;
     double maxWithdrawalLimit;
 
+    public SavingsAccount(String name, double balance, double minBalance) {
+        super(name, balance, minBalance);
+    }
 
     public SavingsAccount(String name, double balance, double maxWithdrawalLimit, double rate) {
         // minimum balance is 0 by default
