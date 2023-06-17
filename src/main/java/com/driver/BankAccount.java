@@ -21,7 +21,7 @@ public class BankAccount {
         //Generate account number having given number of 'digits' such that the sum of digits is equal to 'sum'
         //If it is not possible, throw "Account Number can not be generated" exception
         if(sum < 0 || sum > 9 * digits){
-            throw new RuntimeException("Account Number can not be generated");
+            throw new Exception("Account Number can not be generated");
         }
 
         StringBuilder sb = new StringBuilder();
