@@ -1,11 +1,27 @@
 package com.driver;
-
+//#4
 public class SavingsAccount extends BankAccount{
     double rate;
     double maxWithdrawalLimit;
 
-    public SavingsAccount(String name, double balance, double minBalance) {
-        super(name, balance, minBalance);
+//    public SavingsAccount(String name, double balance, double minBalance) {
+//        super(name, balance, minBalance);
+//    }
+
+    public double getRate() {
+        return rate;
+    }
+
+    public void setRate(double rate) {
+        this.rate = rate;
+    }
+
+    public double getMaxWithdrawalLimit() {
+        return maxWithdrawalLimit;
+    }
+
+    public void setMaxWithdrawalLimit(double maxWithdrawalLimit) {
+        this.maxWithdrawalLimit = maxWithdrawalLimit;
     }
 
     public SavingsAccount(String name, double balance, double maxWithdrawalLimit, double rate) {
@@ -14,6 +30,11 @@ public class SavingsAccount extends BankAccount{
         this.maxWithdrawalLimit = maxWithdrawalLimit; //initialize the maxWithdrawalLimit field
         this.rate = rate; //initialize the rate field
     }
+
+    public SavingsAccount(double rate) {
+        this.rate = rate;
+    }
+
     public void withdraw(double amount) throws Exception {
         // Might throw the following errors:
         // 1. "Maximum Withdraw Limit Exceed" : If the amount exceeds maximum withdrawal limit
@@ -48,5 +69,7 @@ public class SavingsAccount extends BankAccount{
         //Return the final amount
         return compoundInterest;
     }
+
+    // *********
 
 }

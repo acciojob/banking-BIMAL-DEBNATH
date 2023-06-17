@@ -1,14 +1,14 @@
 package com.driver;
-
+// #3
 import java.util.PriorityQueue;
 
 public class CurrentAccount extends BankAccount{
     //BankAccount bankAccount=new BankAccount();
     String tradeLicenseId; //consists of Uppercase English characters only
 
-    public CurrentAccount(String name, double balance, double minBalance) {
-        super(name, balance, minBalance);
-    }
+//    public CurrentAccount(String name, double balance, double minBalance) {
+//        super(name, balance, minBalance);
+//    }
 
     public CurrentAccount(String name, double balance, String tradeLicenseId) throws Exception {
         //super();
@@ -96,6 +96,23 @@ public class CurrentAccount extends BankAccount{
         }
     }
 
+    //  ***********
+    public CurrentAccount(String name, double balance, double minBalance, String tradeLicenseId) {
+        super(name, balance, minBalance);
+        this.tradeLicenseId = tradeLicenseId;
     }
+
+    public CurrentAccount(String tradeLicenseId) {
+        this.tradeLicenseId = tradeLicenseId;
+    }
+
+    public String getTradeLicenseId() {
+        return tradeLicenseId;
+    }
+
+    public void setTradeLicenseId(String tradeLicenseId) {
+        this.tradeLicenseId = tradeLicenseId;
+    }
+}
 
 
