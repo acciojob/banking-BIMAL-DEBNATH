@@ -4,8 +4,6 @@ public class SavingsAccount extends BankAccount{
     double rate;
     double maxWithdrawalLimit;
 
-
-
     public SavingsAccount(String name, double balance, double minBalance, double rate, double maxWithdrawalLimit) {
         super(name, balance, minBalance);
         this.rate = rate;
@@ -73,14 +71,12 @@ public class SavingsAccount extends BankAccount{
 
         //Calculate the compound interest using the formula: A = P * (1 + r / n) ^ (n * t)
         //where A is the final amount, P is the principal amount, r is the rate, n is the number of times per year and t is the time in years
-        double compoundInterest = balance * Math.pow(1 + rate / times, times * years);
+        double A = balance * Math.pow(1 + rate / times, times * years);
 
         //Return the final amount
-        return compoundInterest;
+        return A;
     }
 
-    // *********
-
-
+    
 
 }
