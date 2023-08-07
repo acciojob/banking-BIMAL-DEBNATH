@@ -6,17 +6,17 @@ public class CurrentAccount extends BankAccount{
     //BankAccount bankAccount=new BankAccount();
     String tradeLicenseId; //consists of Uppercase English characters only
 
-//    public CurrentAccount(String name, double balance, double minBalance) {
-//        super(name, balance, minBalance);
-//    }
+
 
     public CurrentAccount(String name, double balance, String tradeLicenseId) throws Exception {
-        //super();
         // minimum balance is 5000 by default. If balance is less than 5000, throw "Insufficient Balance" exception
-        super(name, balance, 5000);   //call the constructor of the parent class
-        this.tradeLicenseId = tradeLicenseId; //initialize the tradeLicenseId field
-        //validateLicenseId(); //check if the license Id is valid
-             };
+        super(name, balance, 5000);
+        this.tradeLicenseId = tradeLicenseId;
+
+        if(balance<5000){
+            throw new RuntimeException("Insufficient Balance");
+        }
+    };
 
 
 

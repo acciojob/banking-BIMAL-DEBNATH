@@ -60,10 +60,10 @@ public class SavingsAccount extends BankAccount{
 
         //Calculate the simple interest using the formula: A = P * (1 + r * t)
         //where A is the final amount, P is the principal amount, r is the rate and t is the time in years
-        double simpleInterest = balance * (1 + rate * years);
+        double TotalSimpleInterest = balance * (1 + (rate * years)/100);
 
         //Return the final amount
-        return simpleInterest;
+        return TotalSimpleInterest;
     }
 
     public double getCompoundInterest(int times, int years){
@@ -71,7 +71,7 @@ public class SavingsAccount extends BankAccount{
 
         //Calculate the compound interest using the formula: A = P * (1 + r / n) ^ (n * t)
         //where A is the final amount, P is the principal amount, r is the rate, n is the number of times per year and t is the time in years
-        double A = balance * Math.pow(1 + rate / times, times * years);
+        double A = balance * Math.pow((1 + rate / (times*100)), times * years);
 
         //Return the final amount
         return A;
