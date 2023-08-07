@@ -20,14 +20,7 @@ public class StudentAccount extends BankAccount{
         this.institutionName = institutionName;
     }
 
-    public StudentAccount(String name, double balance, double minBalance, String institutionName) {
-        super(name, balance, minBalance);
-        this.institutionName = institutionName;
-    }
 
-    public StudentAccount(String institutionName) {
-        this.institutionName = institutionName;
-    }
 }
 
 

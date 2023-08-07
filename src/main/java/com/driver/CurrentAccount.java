@@ -1,24 +1,19 @@
 package com.driver;
-// #3
+
 import java.util.PriorityQueue;
 
 public class CurrentAccount extends BankAccount{
-    //BankAccount bankAccount=new BankAccount();
     String tradeLicenseId; //consists of Uppercase English characters only
-
-
 
     public CurrentAccount(String name, double balance, String tradeLicenseId) throws Exception {
         // minimum balance is 5000 by default. If balance is less than 5000, throw "Insufficient Balance" exception
         super(name, balance, 5000);
         this.tradeLicenseId = tradeLicenseId;
 
-        if(balance<5000){
+        if(super.getBalance()<5000){
             throw new RuntimeException("Insufficient Balance");
         }
-    };
-
-
+    }
 
     public void validateLicenseId() throws Exception {
         // A trade license Id is said to be valid if no two consecutive characters are same
@@ -94,16 +89,9 @@ public class CurrentAccount extends BankAccount{
             //Otherwise, throw an exception
             throw new Exception("Valid License can not be generated");
         }
-    }
 
-    //  ***********
-    public CurrentAccount(String name, double balance, double minBalance, String tradeLicenseId) {
-        super(name, balance, minBalance);
-        this.tradeLicenseId = tradeLicenseId;
-    }
 
-    public CurrentAccount(String tradeLicenseId) {
-        this.tradeLicenseId = tradeLicenseId;
+
     }
 
     public String getTradeLicenseId() {
@@ -113,8 +101,4 @@ public class CurrentAccount extends BankAccount{
     public void setTradeLicenseId(String tradeLicenseId) {
         this.tradeLicenseId = tradeLicenseId;
     }
-
-
 }
-
-
